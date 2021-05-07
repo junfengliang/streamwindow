@@ -37,7 +37,7 @@ public class StreamWindowTest {
     }
     WindowHandler<String> windowHandler = new WindowHandler<String>() {
         @Override public void handle(List<String> list) {
-            String message = String.format("handle {},{},waiting size:{}",
+            String message = String.format("handle %s,%s,waiting size:%s",
                     list.size(),Thread.currentThread().getId(),streamWindow.size());
             log.info(message);
         }
